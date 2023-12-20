@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { render } from "@testing-library/react";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Greeting, Footer } from "./Greeting";
+import Product, { Navbar } from "./Product";
+import { Button } from "./Button";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+let username = "Mullet";
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <>
+        <Navbar />
+        <Greeting
+            username="Mullet"
+            balance={4500}
+            inDebt={false}
+            married={true}
+            address={{ country: "Argentina", city: "Cordoba" }}
+            warning={() => {
+                alert(
+                    "This might contain sensitive information, do not share with anyone"
+                );
+            }}
+        />
+        <Product username="Mullet" />
+        <Footer avenue="Manuel Quintana 2020" />
+        <Button text="Save" />
+    </>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//username, money, inDebt, married, address
