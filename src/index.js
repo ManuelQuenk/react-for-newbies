@@ -4,7 +4,8 @@ import ReactDOM from "react-dom/client";
 import { Greeting, Footer } from "./Greeting";
 import Product, { Navbar } from "./Product";
 import { Button } from "./Button";
-import { TaskCard } from "./Task.jsx";
+import { TaskCard } from "./Task";
+import { Posts } from "./Posts";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -12,18 +13,7 @@ let username = "Mullet";
 
 root.render(
     <>
-        <TaskCard ready={true} />
-        <Button text="Sape" />
-
-        <form
-            onSubmit={(e) => {
-                e.preventDefault();
-                alert("enviado");
-            }}
-        >
-            <h1>Registro de bienes</h1>
-            <button>Send</button>
-        </form>
+        <Posts />
     </>
 );
 
@@ -44,5 +34,20 @@ root.render(
         />
         <Product username="Mullet" />
         <Footer avenue="Manuel Quintana 2020" />
-        <Button text="Save" /> */
+        <Button text="Save" /> 
+        
+        <TaskCard ready={true} />
+        <Button text="Sape" />
+
+        <form
+            onSubmit={(e) => {
+                e.preventDefault();
+                alert("enviado");
+            }}
+        >
+            <h1>Registro de bienes</h1>
+            <button>Send</button>
+        </form>
+        
+        */
 }
