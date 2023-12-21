@@ -13,6 +13,17 @@ let username = "Mullet";
 root.render(
     <>
         <TaskCard ready={true} />
+        <Button text="Sape" />
+
+        <form
+            onSubmit={(e) => {
+                e.preventDefault();
+                alert("enviado");
+            }}
+        >
+            <h1>Registro de bienes</h1>
+            <button>Send</button>
+        </form>
     </>
 );
 

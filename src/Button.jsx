@@ -4,7 +4,15 @@ export function Button({ text }) {
     if (!text) {
         console.error("Text required");
     }
-    return <button>{text}</button>;
+    return (
+        <button
+            onClick={() => {
+                console.log("click");
+            }}
+        >
+            {text}
+        </button>
+    );
 }
 
 Button.propTypes = {
