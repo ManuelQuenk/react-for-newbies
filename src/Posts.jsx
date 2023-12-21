@@ -1,4 +1,5 @@
 import { eventWrapper } from "@testing-library/user-event/dist/utils";
+import { VscArrowCircleUp } from "react-icons/vsc";
 
 export const Posts = () => {
     return (
@@ -15,7 +16,7 @@ export const Posts = () => {
                 }
             }}
         >
-            Traer datos
+            Traer datos <VscArrowCircleUp />
         </button>
     );
 };
