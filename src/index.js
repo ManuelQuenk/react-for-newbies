@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import { Greeting, Footer } from "./Greeting";
 import Product, { Navbar } from "./Product";
 import { Button } from "./Button";
+import { TaskCard } from "./Task.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -11,7 +12,13 @@ let username = "Mullet";
 
 root.render(
     <>
-        <Navbar />
+        <TaskCard ready={true} />
+    </>
+);
+
+//username, money, inDebt, married, address
+{
+    /* <Navbar />
         <Greeting
             username="Mullet"
             balance={4500}
@@ -26,8 +33,5 @@ root.render(
         />
         <Product username="Mullet" />
         <Footer avenue="Manuel Quintana 2020" />
-        <Button text="Save" />
-    </>
-);
-
-//username, money, inDebt, married, address
+        <Button text="Save" /> */
+}
